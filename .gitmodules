@@ -1,0 +1,6 @@
+[submodule "ams-backend"]
+	path = ams-backend
+	url = git@github.com:kishmatbhtr/ams-backend.git
+[submodule "ams-frontend"]
+	path = ams-frontend
+	url = git@github.com:kishmatbhtr/ams-frontend.git
