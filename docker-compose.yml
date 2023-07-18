@@ -1,0 +1,23 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./ams-backend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    env_file: .env
+    volumes:
+      - ./ams-backend:/app
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+  minio:
+    image: quay.io/minio/minio
+    ports:
+      - "9000:9000" # S3 PORT
+      - "9090:9090" # HTTP PORT
+    volumes:
+      - ./minio/data:/data
+    environment:
+      - MINIO_ROOT_USER= ${MINIO_ACCESS_KEY}
+      - MINIO_ROOT_PASSWORD= ${MINIO_SECRET_KEY}
+    command: server /data --console-address ":9090" --certs-dir /minio/data/certs
