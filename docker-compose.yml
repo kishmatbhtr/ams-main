@@ -30,3 +30,4 @@ services:
     volumes:
       - ./ams-frontend:/front
       - /front/node_modules #Avoid re-copying local node_modules.
+      - /front/.next
