@@ -28,8 +28,8 @@ git checkout master
 git pull origin master
 
 # dir -> ams-backend
-git checkout master
-git pull origin master
+git checkout main
+git pull origin main
 ```
 
 5. Install docker and docker compose
