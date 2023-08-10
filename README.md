@@ -63,7 +63,7 @@ export COMPOSE_HTTP_TIMEOUT=120
 make dev
 ```
 
-8. After successful docker build completion, visit `localhost:3001` for frontend, `localhost:8001` for backend and `127.0.0.1:9001` to access MinIO console (Login credentials provided in .env file)
+8. After successful docker build completion, visit `https://{YOUR_IP}` for frontend, `https://{YOUR_IP}/api` for backend and `https://{YOUR_IP}/console/` to access MinIO console (Login credentials provided in .env file)
 
 9. To restart the running containers
 
