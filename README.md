@@ -24,12 +24,12 @@ git clone git@github.com:kishmatbhtr/ams-main.git
 
 ```
 # dir -> ams-frontend
-git checkout master
-git pull origin master
-
-# dir -> ams-backend
 git checkout main
 git pull origin main
+
+# dir -> ams-backend
+git checkout master
+git pull origin master
 ```
 
 5. Install docker and docker compose
